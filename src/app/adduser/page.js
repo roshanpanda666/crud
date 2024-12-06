@@ -112,7 +112,7 @@ const page = () => {
                 </button>
             </div>
             <div className='flex justify-center items-center mt-5'> 
-          <Link href='/userlist'>user list</Link>
+          <Link href='/'>user list</Link>
                 </div>
             
 
