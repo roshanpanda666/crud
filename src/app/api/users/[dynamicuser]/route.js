@@ -20,3 +20,17 @@ export async function GET(request,content){
     const result=await User.findById(record)
     return NextResponse.json({result,success:true})
 }
+
+export async function DELETE(request,content){
+
+    const productId= content.params.dynamicuser
+    
+    const record={_id:filter}
+    
+    await mongoose.connect(connectionSRT)
+    
+    const result =await User.deleteOne(record)
+    
+     return NextResponse.json({result,success:true})
+    
+    }

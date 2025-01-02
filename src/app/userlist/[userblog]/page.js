@@ -42,6 +42,8 @@ export default async function Blog({ params }) {
                     <div className="p-4 rounded-lg bg-gray-800 text-white">
                         <ReactMarkdown remarkPlugins={[remarkGfm]}>{result.blog}</ReactMarkdown>
                     </div>
+                    
+                    
                 </div>
             </div>
         </div>

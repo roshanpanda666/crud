@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import DeleteProduct from "@/lib/deleteProduct";
 
 const fetchuser = async () => {
     try {
@@ -59,6 +60,12 @@ const Page = () => {
                                   <div className=" w-96 ">
                                     <Link href={"/userlist/"+item._id}>see blog</Link>
                                   </div>
+
+                                  <td className="border-2 border-gray-400 text-red-600">
+
+                                    <DeleteProduct id={item._id}></DeleteProduct>
+
+                                </td>
                                     
                                 </div>
                             </div>
@@ -67,7 +74,7 @@ const Page = () => {
                         <div className="text-center text-gray-500">No users found.</div>
                     )}
                 </div>
-                <div>
+                <div className="flex justify-center items-center border-2 border-green-400">
                     <Link href="/adduser">add user</Link>
                 </div>
             </div>
